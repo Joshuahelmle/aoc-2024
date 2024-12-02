@@ -1,4 +1,4 @@
-package main
+package day1
 
 import (
 	"bufio"
@@ -34,7 +34,7 @@ func readInputFile(inputFile string) ([]int, []int, error) {
 	return l1, l2, nil
 }
 
-func day1First() int {
+func Day1First() int {
 	l1, l2, err := readInputFile("input/day1_1.txt")
 	if err != nil {
 		fmt.Println(err)
@@ -51,7 +51,7 @@ func day1First() int {
 
 }
 
-func day1Second() int {
+func Day1Second() int {
 
 	l1, l2, err := readInputFile("input/day1_1.txt")
 	if err != nil {
