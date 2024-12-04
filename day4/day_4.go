@@ -56,3 +56,21 @@ func Part1() int {
 	return sum
 
 }
+
+func Part2() int {
+	sum := 0
+	grid := readInput()
+	diaDownRight := func(x, y int) (int, int) { return x + 1, y + 1 }
+	diaDownLeft := func(x, y int) (int, int) { return x - 1, y + 1 }
+	for y, row := range grid {
+		for x := range row {
+			if checkWord([]rune("MAS"), x, y, grid, diaDownRight) || checkWord([]rune("SAM"), x, y, grid, diaDownRight) {
+				if checkWord([]rune("MAS"), x+2, y, grid, diaDownLeft) || checkWord([]rune("SAM"), x+2, y, grid, diaDownLeft) {
+					sum += 1
+				}
+			}
+
+		}
+	}
+	return sum
+}
