@@ -29,16 +29,15 @@ func parseFile(regex *regexp.Regexp, file *os.File) [][]string {
 		line := scanner.Text()
 		matches := regex.FindAllStringSubmatch(line, -1)
 		if len(matches) > 0 {
-			for _, match := range matches {
-				data = append(data, match)
-			}
+			data = append(data, matches...)
+
 		}
 	}
 	return data
 }
 
 func Part1() int {
-	re := regexp.MustCompile(`mul\(([0-9]{1,3}),([0-9]{1,3})\)`)
+	re := regexp.MustCompile(`mul\(([0-9]{4,}),([0-9]{4,})\)`)
 	input, err := os.Open("input/day3.txt")
 	if err != nil {
 		fmt.Println(err)

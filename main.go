@@ -6,6 +6,7 @@ import (
 	"github.com/joshuahelmle/go-aoc/day1"
 	"github.com/joshuahelmle/go-aoc/day2"
 	"github.com/joshuahelmle/go-aoc/day3"
+	"github.com/joshuahelmle/go-aoc/day4"
 )
 
 func main() {
@@ -15,4 +16,5 @@ func main() {
 	fmt.Printf("Day 2 second Question: %d\n", day2.Part2())
 	fmt.Printf("Day 3 first Question: %d\n", day3.Part1())
 	fmt.Printf("Day 3 second Question: %d\n", day3.Part2())
+	fmt.Printf("Day 4 first Question: %d\n", day4.Part1())
 }
